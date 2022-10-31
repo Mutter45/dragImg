@@ -1,0 +1,190 @@
+@media screen and (min-width: 1100px) {
+  body {
+    .box {
+      #img-list {
+        .img-box {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 700px) {
+  body {
+    .box {
+      #img-list {
+        .img-box {
+          width: 33.333%;
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    .box {
+      #img-list {
+        .img-box {
+          width: 50%;
+
+        }
+      }
+    }
+  }
+}
+
+body {
+  .box {
+    margin-top: 20px;
+
+    #img-list {
+      display: flex;
+      flex-wrap: wrap;
+
+
+      .img-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .item {
+          height: 150px;
+          border: 1px solid #fff;
+          background-color: #000;
+          width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .photo {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        span {
+          display: block;
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+
+    .track-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #ddd;
+      padding-top: 50px;
+      overflow-y: visible;
+      overflow-x: scroll;
+
+      .time-track {
+        height: 50px;
+        display: inline-flex;
+        white-space: nowrap;
+
+        >span {
+          display: inline-block;
+          text-align: center;
+          width: 200px;
+          height: 100%;
+          background: #eee;
+          background-image: repeating-linear-gradient(90deg, grey 0, grey 2px, transparent 0, transparent 200px), repeating-linear-gradient(90deg, grey 0, grey 2px, transparent 0, transparent 100px), repeating-linear-gradient(90deg, grey 0, grey 2px, transparent 0, transparent 20px);
+          background-repeat: no-repeat;
+          background-size: 100% 20px, 100% 15px, 100% 10px;
+          background-position: 0 100%;
+
+          &:nth-child(1) {
+            width: 100px;
+            text-align: left;
+          }
+        }
+      }
+
+      .img-track {
+        position: relative;
+        height: 150px;
+        white-space: nowrap;
+        min-width: 100%;
+        .img {
+          position: absolute;
+          height: 100%;
+          border: 3px solid grey;
+          // transition: all .3s;
+          background-image: url(../asset/test.webp);
+          // background-size:100% auto;
+          background-repeat:no-repeat;
+          background-size:contain;
+          &.sort {
+            transition: all .5s;
+          }
+        }
+        .right {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      .vernier {
+        position: absolute;
+        bottom: 160px;
+        background: greenyellow;
+        padding: 15px 30px;
+        border-radius: 5px;
+        transform: translateX(-50%);
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        left: 275px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-top: 10px solid greenyellow;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          cursor: col-resize;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(calc(-50%),10px);
+          height: 150px;
+          border-right: 3px solid greenyellow;
+        }
+        .tailoring {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  .clone-img {
+    position: fixed;
+    border:2px solid blue;
+    display: block;
+    top: 20px;
+    left: 30px;
+    max-width: 300px;
+    max-height: 150px;
+  }
+  .clone-Img {
+    position: fixed;
+    border:2px solid blue;
+    display: block;
+    height: 100%;
+  }

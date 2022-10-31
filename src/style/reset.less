@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html,
+body {
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+}
+a {
+    text-decoration: none
+}
+
+/* 重置列表元素 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置文本格式元素 */
+a {
+    text-decoration: none;
+}
+
+
+/* 重置表单元素 */
+legend {
+    color: #000;
+}
+
+/* for ie6 */
+fieldset,
+img {
+    border: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+    overflow-y: scroll;
+}
+
+a:link:hover {
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    outline: none;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    display: block;
+    height: 0;
+    content: "";
+    clear: both;
+    visibility: hidden;
+}
